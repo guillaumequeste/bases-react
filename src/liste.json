@@ -1,0 +1,16 @@
+[{
+        "id": "1",
+        "nom": "Lenoir",
+        "prenom": "André"
+    },
+    {
+        "id": "2",
+        "nom": "Legris",
+        "prenom": "Michel"
+    },
+    {
+        "id": "3",
+        "nom": "Maréchal",
+        "prenom": "Denis"
+    }
+]
