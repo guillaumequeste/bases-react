@@ -9,6 +9,8 @@ import Detail from './components/Detail'
 import Normal from './components/Normal'
 import Contact from './components/Contact'
 
+import NotFound from './components/NotFound'
+
 const Root = () => (
     <Router>
         <Switch>
@@ -17,6 +19,8 @@ const Root = () => (
             <Route path='/personne/:id' component={Detail}/>
             <Route path='/normal' component={Normal}/>
             <Route path='/contact' component={Contact}/>
+
+            <Route component={NotFound} />
         </Switch>
     </Router>
 )
