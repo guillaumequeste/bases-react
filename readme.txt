@@ -21,3 +21,19 @@ Ajouter react-reveal :
         - <Zoom>
             <p>Markup that will be revealed on scroll</p>
           </Zoom>
+
+Ajouter react anchor link smooth scroll :
+    - yarn add react-anchor-link-smooth-scroll
+    - dans le fichier voulu (ex : App.js) :
+        - import AnchorLink from 'react-anchor-link-smooth-scroll'
+        - <AnchorLink href='#things'>Things</AnchorLink>
+          <AnchorLink href='#stuff'>Stuff</AnchorLink>
+                    .
+                    .
+                    .
+         <section id='things'>
+            <h2>Things</h2>
+         </section>
+         <section id='stuff'>
+            <h2>Stuff</h2>
+         </section>
