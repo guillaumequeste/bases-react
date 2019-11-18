@@ -38,7 +38,7 @@ Ajouter react anchor link smooth scroll :
             <h2>Stuff</h2>
          </section>
 
-Envoyer un email via EmailJS (au préalable, créer un compte et sélectionner la messagerie utilisée, ici gmail):
+Envoyer un email via EmailJS (au préalable, créer un compte et sélectionner la messagerie utilisée, ici gmail, connexion emailjs avec mon compte gmail):
     - dans le fichier public/index.html, ajouter dans le head après le titre :
         -   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
             <script type="text/javascript">
