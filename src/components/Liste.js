@@ -11,9 +11,9 @@ class Liste extends Component {
                 <Header />
                 <div>
                     {liste.map(({id, nom, prenom}) => (
-                        <div>
+                        <div key={id}>
                         <Link to={`/personne/${id}`} 
-                            key={id}>{prenom} {nom}</Link><br></br>
+                            >{prenom} {nom}</Link><br></br>
                         </div>
                     ))}
                 </div>
