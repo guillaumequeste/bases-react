@@ -4,7 +4,6 @@ import Header from './Header'
 import liste from '../liste.json'
 
 class Liste extends Component {
-  
     render () {
         return (
             <div>
@@ -12,7 +11,7 @@ class Liste extends Component {
                 <div>
                     {liste.map(({id, nom, prenom}) => (
                         <div key={id}>
-                        <Link to={`/personne/${id}`} 
+                        <Link to={`/personne/${id}`}
                             >{prenom} {nom}</Link><br></br>
                         </div>
                     ))}

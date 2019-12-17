@@ -57,3 +57,5 @@ Envoyer un email via EmailJS :
                 })();
             </script>
     - fichier Contact.js avec le template_id utilisé (j'ai utilisé gmail)
+
+yarn build
