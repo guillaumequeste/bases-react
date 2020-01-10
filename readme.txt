@@ -1,3 +1,6 @@
+Si 'npx create-react-app myapp' n'installe pas public, src, scripts, faire :
+yarn create react-app myapp 
+
 Ajouter bootstrap :
     - yarn add bootstrap
     - yarn add jquery popper.js
