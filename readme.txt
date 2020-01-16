@@ -59,6 +59,7 @@ Envoyer un email via EmailJS :
                     emailjs.init("USER ID"); // <- USER ID dans les détails de mon compte emailjs
                 })();
             </script>
-    - fichier Contact.js avec le template_id utilisé (j'ai utilisé gmail)
+    - fichier Contact.js avec le template_id utilisé (j'ai utilisé gmail, emailjs.com -> email templates)
+    - message reçu dans ma boîte mail laposte car adresse laposte indiquée dans mon compte emailjs
 
 yarn build

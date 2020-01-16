@@ -34,7 +34,7 @@ class Contact extends Component {
     }
     
     handleSubmit (event) {
-        const templateId = 'template_id'; // mettre son template_id
+        const templateId = 'template_id'; // mettre son template_id (emailjs.com -> email templates)
     
         this.sendFeedback(templateId, {nom: this.state.nom, prenom: this.state.prenom, email: this.state.email, telephone: this.state.telephone, message: this.state.message, })
     }
