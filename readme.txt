@@ -85,6 +85,7 @@ Pour le SEO :
 ou  - après le build, dans le fichier index.html, changer le head :
         <meta charset="utf-8" />
         <title>Jeux Olympiques Guillaume Queste</title>
+        <meta name="keywords" content="Guillaume Queste developpeur web portfolio projet personnel" />
         <meta name="description" content="projet personnel jeux olympiques guillaume queste portfolio" />
         <meta property="og:title" content="Portfolio Guillaume Queste développeur web" />
         <meta property="og:type" content="website" />
