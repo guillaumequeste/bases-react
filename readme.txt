@@ -63,3 +63,30 @@ Envoyer un email via EmailJS :
     - message reçu dans ma boîte mail laposte car adresse laposte indiquée dans mon compte emailjs
 
 yarn build
+
+Pour le SEO :
+    - yarn add react-helmet
+        -> dans le fichier voulu : import {Helmet} from "react-helmet";
+        -> puis : class Application extends React.Component {
+                    render () {
+                        return (
+                            <div className="application">
+                                <Helmet>
+                                    <meta charSet="utf-8" />
+                                    <title>My Title</title>
+                                    <link rel="canonical" href="http://mysite.com/example" />
+                                </Helmet>
+                                ...
+                            </div>
+                        );
+                    }
+                    };
+
+ou  - après le build, dans le fichier index.html, changer le head :
+        <meta charset="utf-8" />
+        <title>Jeux Olympiques Guillaume Queste</title>
+        <meta name="description" content="projet personnel jeux olympiques guillaume queste portfolio" />
+        <meta property="og:title" content="Portfolio Guillaume Queste développeur web" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://www.guillaumequeste.fr" />
+        <meta property="og:image" content="http://www.guillaumequeste.fr/img/photoCVmini.jpg" />
