@@ -9,6 +9,7 @@ Ajouter bootstrap :
         - import $ from 'jquery'
         - import Popper from 'popper.js'
         - import 'bootstrap/dist/js/bootstrap.bundle.min'
+    - lorsqu'on l'utilise, il faut fermer la balise input : <input>...</input>
 
 Ajouter animate.css :
     - yarn add animate.css
