@@ -71,7 +71,7 @@ Pour le SEO :
 
             import React, { Component } from 'react'
             import {Helmet} from "react-helmet"
-            class Helmet extends Component {
+            class HelmetComponent extends Component {
                 render () {
                     return (
                         <div>
@@ -97,7 +97,7 @@ Pour le SEO :
                     )
                 }
             }
-            export default Helmet
+            export default HelmetComponent
 
         -> dans le fichier voulu : import Helmet from './components/Helmet'
         -> puis insérer <Helmet /> dans le return :
