@@ -67,28 +67,57 @@ yarn build
 
 Pour le SEO :
     - yarn add react-helmet
-        -> dans le fichier voulu : import {Helmet} from "react-helmet";
-        -> puis : class Application extends React.Component {
-                    render () {
-                        return (
-                            <div className="application">
-                                <Helmet>
-                                    <meta charSet="utf-8" />
-                                    <title>My Title</title>
-                                    <link rel="canonical" href="http://mysite.com/example" />
-                                </Helmet>
-                                ...
-                            </div>
-                        );
-                    }
-                    };
+        -> dans le dossier components que j'ai créé, créer le fichier 'Helmet.js'
+
+            import React, { Component } from 'react'
+            import {Helmet} from "react-helmet"
+            class Helmet extends Component {
+                render () {
+                    return (
+                        <div>
+                            <Helmet>
+                                <meta charSet="utf-8" />
+                                <title>{this.props.title}</title>
+                                <link rel="canonical" href={this.props.link} />
+                                <meta name="keywords" content="Guillaume Queste developpeur web portfolio projet react histoire France" />
+                                <meta name="description" content="Frise historique répertoriant les dirigeants français au cours des siècles." />
+                                <meta property="og:title" content="Projet React Histoire de france" />
+                                <meta property="og:type" content="website" />
+                                <meta property="og:url" content="http://histoire.guillaumequeste.fr" />
+                                <meta property="og:image" content="http://www.guillaumequeste.fr/img/histoire.png" />
+                                <meta property="og:locale" content="fr_FR" />
+                                <meta property="og:title" content="Projet React Histoire de france" />
+                                <meta property="og:description" content="Frise historique répertoriant les dirigeants français au cours des siècles." />
+                                <meta property="og:site_name" content="Projet React Histoire de france" />
+                                <meta name="twitter:description" content="Frise historique répertoriant les dirigeants français au cours des siècles." />
+                                <meta name="twitter:title" content="Projet React Histoire de france" />
+                                <meta name="twitter:image" content="http://www.guillaumequeste.fr/img/histoire.png" />
+                            </Helmet>
+                        </div>
+                    )
+                }
+            }
+            export default Helmet
+
+        -> dans le fichier voulu : import Helmet from './components/Helmet'
+        -> puis insérer <Helmet /> dans le return :
+            <Helmet title={"Frise Histoire deFrance"}
+              link={"http://histoire.guillaumequeste.fr"} />
 
 ou  - après le build, dans le fichier index.html, changer le head :
-        <meta charset="utf-8" />
-        <title>Jeux Olympiques Guillaume Queste</title>
-        <meta name="keywords" content="Guillaume Queste developpeur web portfolio projet personnel" />
-        <meta name="description" content="projet personnel jeux olympiques guillaume queste portfolio" />
-        <meta property="og:title" content="Portfolio Guillaume Queste développeur web" />
+        <meta charSet="utf-8" />
+        <title>Frise Histoire de France</title>
+        <link rel="canonical" href="https://histoire.guillaumequeste.fr" />
+        <meta name="keywords" content="Guillaume Queste developpeur web portfolio projet react histoire France" />
+        <meta name="description" content="Frise historique répertoriant les dirigeants français au cours des siècles." />
+        <meta property="og:title" content="Projet React Histoire de france" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://www.guillaumequeste.fr" />
-        <meta property="og:image" content="http://www.guillaumequeste.fr/img/photoCVmini.jpg" />
+        <meta property="og:url" content="http://histoire.guillaumequeste.fr" />
+        <meta property="og:image" content="http://www.guillaumequeste.fr/img/histoire.png" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:title" content="Projet React Histoire de france" />
+        <meta property="og:description" content="Frise historique répertoriant les dirigeants français au cours des siècles." />
+        <meta property="og:site_name" content="Projet React Histoire de france" />
+        <meta name="twitter:description" content="Frise historique répertoriant les dirigeants français au cours des siècles." />
+        <meta name="twitter:title" content="Projet React Histoire de france" />
+        <meta name="twitter:image" content="http://www.guillaumequeste.fr/img/histoire.png" />
