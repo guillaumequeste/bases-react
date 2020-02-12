@@ -21,7 +21,7 @@ const Root = () => (
         <Switch>
             <Route exact path='/' component={App}/>
             <Route path='/liste' component={Liste}/>
-            <Route path={'/personne/:id'} component={Detail} />
+            <Route path='/personne/:id' component={Detail} />
             <Route path='/normal' component={Normal}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/toggle' component={Toggle}/>
