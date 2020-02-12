@@ -1,52 +1,30 @@
 import React, { Component } from 'react'
 import Header from './Header'
-
-
-const personnes = {
-   1: { 
-        nom: "Lenoir",
-        prenom: "André",
-        photo: "andre.png",
-        age: "68",
-        profession: "Agent",
-    },
-    2: { 
-        nom: "Legris",
-        prenom: "Michel",
-        photo: "michel.png",
-        age: "47",
-        profession: "Pompier",
-    },
-    3: { 
-        nom: "Maréchal",
-        prenom: "Denis",
-        photo: "denis.png",
-        age: "54",
-        profession: "Policier",
-    }
-}
+import liste from '../liste.json'
 
 class Detail extends Component {
     render () {
         const requireImage = () => {
+            var liste = require("../liste.json");
             try {
-                return require(`../img/${personnes[this.props.match.params.id].photo}`)
+                return require(`../img/${liste[this.props.match.params.id-1].photo}`)
             } catch (err) {
                 return require('../img/paint.jpg')
             }
         }
+
         return (
             <div>
                 <Header />
                 <div className="fiche">
                     <div className="image">
-                        <img src={requireImage(personnes[this.props.match.params.id].photo)} className="tailleImage" alt={this.props.match.params.nom}/>
+                        <img src={requireImage(liste[this.props.match.params.id-1].photo)} className="tailleImage" alt={liste[this.props.match.params.id-1].nom}/>
                     </div>
                     <div>
-                        <h2>{personnes[this.props.match.params.id].prenom}</h2>
-                        <h2>{personnes[this.props.match.params.id].nom}</h2>
-                        <h3>{personnes[this.props.match.params.id].age} ans</h3>
-                        <h3>{personnes[this.props.match.params.id].profession}</h3>
+                        <h2>{liste[this.props.match.params.id-1].prenom}</h2>
+                        <h2>{liste[this.props.match.params.id-1].nom}</h2>
+                        <h3>{liste[this.props.match.params.id-1].age} ans</h3>
+                        <h3>{liste[this.props.match.params.id-1].profession}</h3>
                     </div>
                 </div>
             </div>

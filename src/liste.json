@@ -1,16 +1,25 @@
 [{
         "id": "1",
         "nom": "Lenoir",
-        "prenom": "André"
+        "prenom": "André",
+        "photo": "andre.png",
+        "age" : 68,
+        "profession" : "Agent"
     },
     {
         "id": "2",
         "nom": "Legris",
-        "prenom": "Michel"
+        "prenom": "Michel",
+        "photo": "michel.png",
+        "age" : 47,
+        "profession" : "Pompier"
     },
     {
         "id": "3",
         "nom": "Maréchal",
-        "prenom": "Denis"
+        "prenom": "Denis",
+        "photo": "denis.png",
+        "age" : 54,
+        "profession" : "Policier"
     }
 ]
