@@ -1,7 +1,19 @@
-Si 'npx create-react-app myapp' n'installe pas public, src, scripts, faire :
+1) créer application
+2) ajouter bootstrap
+3) ajouter animate.css
+4) ajouter react-reveal
+5) ajouter react anchor link smmooth scroll
+6) envoyer un mail via EmailJS
+7) yarn build
+8) SEO (react-helmet)
+9) ancienne version 'Detail.js'
+10) redirect react-router
+
+
+1) Si 'npx create-react-app myapp' n'installe pas public, src, scripts, faire :
 yarn create react-app myapp 
 
-Ajouter bootstrap :
+2) Ajouter bootstrap :
     - yarn add bootstrap
     - yarn add jquery popper.js
     - src/index.js :
@@ -11,14 +23,14 @@ Ajouter bootstrap :
         - import 'bootstrap/dist/js/bootstrap.bundle.min'
     - lorsqu'on l'utilise, il faut fermer la balise input : <input>...</input>
 
-Ajouter animate.css :
+3) Ajouter animate.css :
     - yarn add animate.css
     - src/index.js :
         - import "animate.css/animate.min.css"
     - dans le fichier voulu (ex : App.js) :
         - <div className="animated flash delay-2s">Example</div>
 
-Ajouter react-reveal :
+4) Ajouter react-reveal :
     - yarn add react-reveal
     - dans le fichier voulu (ex : App.js) :
         - import Zoom from 'react-reveal/Zoom'
@@ -26,7 +38,7 @@ Ajouter react-reveal :
             <p>Markup that will be revealed on scroll</p>
           </Zoom>
 
-Ajouter react anchor link smooth scroll :
+5) Ajouter react anchor link smooth scroll :
     - yarn add react-anchor-link-smooth-scroll
     - dans le fichier voulu (ex : App.js) :
         - import AnchorLink from 'react-anchor-link-smooth-scroll'
@@ -42,7 +54,7 @@ Ajouter react anchor link smooth scroll :
             <h2>Stuff</h2>
          </section>
 
-Envoyer un email via EmailJS :
+6) Envoyer un email via EmailJS :
     - créer un compte emailjs et sélectionner la messagerie utilisée (ici gmail, synchronisation compte gmail->emailjs), puis créer un email template :
 
         Subject
@@ -63,9 +75,9 @@ Envoyer un email via EmailJS :
     - fichier Contact.js avec le template_id utilisé (j'ai utilisé gmail, emailjs.com -> email templates)
     - message reçu dans ma boîte mail laposte car adresse laposte indiquée dans mon compte emailjs
 
-yarn build
+7) yarn build
 
-Pour le SEO :
+8) Pour le SEO :
     - yarn add react-helmet
         -> dans le dossier components que j'ai créé, créer le fichier 'Helmet.js'
 
@@ -126,7 +138,7 @@ ou  - après le build, dans le fichier index.html, changer le head :
 
 
 
-Ancienne version 'Detail.js' :
+9) Ancienne version 'Detail.js' :
 
     import React, { Component } from 'react'
 import Header from './Header'
@@ -185,3 +197,10 @@ class Detail extends Component {
 }
 
 export default Detail
+
+
+10) Redirect react-router :
+    - importer Redirect : import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+    - <Route path="*">
+        <Redirect to="/"/>
+     </Route>
