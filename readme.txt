@@ -7,7 +7,7 @@
 7) yarn build
 8) SEO (react-helmet)
 9) ancienne version 'Detail.js'
-10) redirect react-router
+10) redirect react-router et .htaccess
 
 
 1) Si 'npx create-react-app myapp' n'installe pas public, src, scripts, faire :
@@ -201,6 +201,16 @@ export default Detail
 
 10) Redirect react-router :
     - importer Redirect : import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-    - <Route path="*">
-        <Redirect to="/"/>
-     </Route>
+    - <Switch>
+            |
+            |
+        <Route path='/notfound' component={NotFound}/>
+        <Redirect to="/notfound" />
+     </Switch>
+    - en production, à la racine du dossier, mettre un fichier ".htaccess" :
+        RewriteEngine On
+        RewriteBase /
+        RewriteRule ^index.html$ - [L]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule . /index.html [L]

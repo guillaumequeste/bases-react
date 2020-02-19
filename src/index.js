@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import Liste from './components/Liste'
 import Detail from './components/Detail'
 import Normal from './components/Normal'
@@ -25,8 +25,8 @@ const Root = () => (
             <Route path='/normal' component={Normal}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/toggle' component={Toggle}/>
-
-            <Route component={NotFound} />
+            <Route path='/notfound' component={NotFound}/>
+            <Redirect to="/notfound" />
         </Switch>
     </Router>
 )
