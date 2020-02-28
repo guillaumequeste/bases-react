@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Header from './Header'
 
-class Normal extends Component {
+class NotFound extends Component {
   
     render () {
         return (
@@ -13,4 +13,4 @@ class Normal extends Component {
     }
 }
 
-export default Normal
+export default NotFound
