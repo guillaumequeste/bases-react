@@ -8,10 +8,12 @@
 8) SEO (react-helmet)
 9) ancienne version 'Detail.js'
 10) redirect react-router et .htaccess
+11) lightbox
 
 
 1) Si 'npx create-react-app myapp' n'installe pas public, src, scripts, faire :
 yarn create react-app myapp 
+
 
 2) Ajouter bootstrap :
     - yarn add bootstrap
@@ -30,6 +32,7 @@ yarn create react-app myapp
     - dans le fichier voulu (ex : App.js) :
         - <div className="animated flash delay-2s">Example</div>
 
+
 4) Ajouter react-reveal :
     - yarn add react-reveal
     - dans le fichier voulu (ex : App.js) :
@@ -37,6 +40,7 @@ yarn create react-app myapp
         - <Zoom>
             <p>Markup that will be revealed on scroll</p>
           </Zoom>
+
 
 5) Ajouter react anchor link smooth scroll :
     - yarn add react-anchor-link-smooth-scroll
@@ -53,6 +57,7 @@ yarn create react-app myapp
          <section id='stuff'>
             <h2>Stuff</h2>
          </section>
+
 
 6) Envoyer un email via EmailJS :
     - créer un compte emailjs et sélectionner la messagerie utilisée (ici gmail, synchronisation compte gmail->emailjs), puis créer un email template :
@@ -75,7 +80,9 @@ yarn create react-app myapp
     - fichier Contact.js avec le template_id utilisé (j'ai utilisé gmail, emailjs.com -> email templates)
     - message reçu dans ma boîte mail laposte car adresse laposte indiquée dans mon compte emailjs
 
+
 7) yarn build
+
 
 8) Pour le SEO :
     - yarn add react-helmet
@@ -135,14 +142,10 @@ ou  - après le build, dans le fichier index.html, changer le head :
         <meta name="twitter:image" content="http://www.guillaumequeste.fr/img/histoire.png" />
 
 
-
-
-
 9) Ancienne version 'Detail.js' :
 
     import React, { Component } from 'react'
 import Header from './Header'
-
 
 const personnes = {
    1: { 
@@ -214,3 +217,10 @@ export default Detail
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteRule . /index.html [L]
+
+
+11) Ajouter 2 librairies :
+        - yarn add mdbreact
+        - yarn add react-image-lightbox
+    Ajouter un component 'LB.js'
+    Ajouter un fichier css 'Lightbox.css'

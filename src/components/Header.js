@@ -10,6 +10,7 @@ class Header extends Component {
                 <Link to="/normal">Normal</Link>
                 <Link to="/contact">Contact</Link>
                 <Link to="/toggle">Toggle</Link>
+                <Link to="/lb">Lightbox</Link>
             </div>
         )
     }
