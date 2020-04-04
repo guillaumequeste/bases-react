@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "acorn": "^7.1.1",
     "bootstrap": "^4.4.1",
     "eslint-utils": "^2.0.0",
     "handlebars": "^4.5.3",
     "jquery": "^3.4.1",
+    "kind-of": "^6.0.3",
     "lodash": "^4.17.14",
     "lodash.template": "^4.5.0",
     "mdbreact": "^4.25.3",
