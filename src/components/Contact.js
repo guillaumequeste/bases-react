@@ -218,7 +218,7 @@ class Contact extends Component {
                             id="message"
                             name="message"
                             onChange={this.handleChangeMessage}
-                            placeholder="Votre message"
+                            placeholder="Laisser votre message"
                             required
                             value={this.state.message}
                             rows="4"
