@@ -87,7 +87,7 @@ class Contact extends Component {
             return
         }
 
-        const templateId = 'template_gUHsX4ZA'; // mettre son template_id (emailjs.com -> email templates)
+        const templateId = 'template_id'; // mettre son template_id (emailjs.com -> email templates)
     
         this.sendFeedback(templateId, {ville: this.state.ville, genre: this.state.genre, nom: this.state.nom, prenom: this.state.prenom, email: this.state.email, telephone: this.state.telephone, message: this.state.message, })
     }
