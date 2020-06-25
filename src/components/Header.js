@@ -11,6 +11,7 @@ class Header extends Component {
                 <Link to="/contact">Contact</Link>
                 <Link to="/toggle">Toggle</Link>
                 <Link to="/lb">Lightbox</Link>
+                <Link to="/hooks">Hooks</Link>
             </div>
         )
     }
