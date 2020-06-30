@@ -11,6 +11,7 @@ import Contact from './components/Contact'
 import Toggle from './components/Toggle'
 import LB from './components/LB'
 import Hooks from './components/Hooks'
+import Infos from './components/Infos'
 
 import NotFound from './components/NotFound'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -29,6 +30,7 @@ const Root = () => (
             <Route path='/toggle' component={Toggle}/>
             <Route path='/lb' component={LB}/>
             <Route path='/hooks' component={Hooks}/>
+            <Route path='/infos' component={Infos}/>
             <Route path='/notfound' component={NotFound}/>
             <Redirect to="/notfound" />
         </Switch>

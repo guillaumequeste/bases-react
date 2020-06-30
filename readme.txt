@@ -9,10 +9,12 @@
 9) ancienne version 'Detail.js'
 10) redirect react-router et .htaccess
 11) lightbox
+12) carte (leaflet react-leaflet)
 
 
 1) Si 'npx create-react-app myapp' n'installe pas public, src, scripts, faire :
-yarn create react-app myapp 
+yarn create react-app myapp
+yarn start
 
 
 2) Ajouter bootstrap :
@@ -24,6 +26,7 @@ yarn create react-app myapp
         - import Popper from 'popper.js'
         - import 'bootstrap/dist/js/bootstrap.bundle.min'
     - lorsqu'on l'utilise, il faut fermer la balise input : <input>...</input>
+
 
 3) Ajouter animate.css :
     - yarn add animate.css
@@ -224,3 +227,11 @@ export default Detail
         - yarn add react-image-lightbox
     Ajouter un component 'LB.js'
     Ajouter un fichier css 'Lightbox.css'
+
+
+12) Ajouter 2 librairies :
+        - yarn add leaflet
+        - yarn add react-leaflet
+    Ajouter un component 'Carte.jsx'
+    Ajouter un component 'Inos.jsx' (composant dans lequel se trouve la carte)
+    Ajouter le css (section 'Infos' dans 'App.css')
