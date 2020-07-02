@@ -10,6 +10,7 @@
 10) redirect react-router et .htaccess
 11) lightbox
 12) carte (leaflet react-leaflet)
+13) référencement (react-helmet)
 
 
 1) Si 'npx create-react-app myapp' n'installe pas public, src, scripts, faire :
@@ -235,3 +236,13 @@ export default Detail
     Ajouter un component 'Carte.jsx'
     Ajouter un component 'Inos.jsx' (composant dans lequel se trouve la carte)
     Ajouter le css (section 'Infos' dans 'App.css')
+
+
+13) Ajouter une librairie :
+        - yarn add react-helmet
+    Créer un composant 'Helmet.jsx' dans le dossier 'components'
+    Dans chaque composant, mettre :
+        - import Helmet from './Helmet' (import Helmet from './components/Helmet' pour 'App.js')
+        - <Helmet title={"Normal bases React"}
+                        link={"https://www.guillaumequeste.fr"} />
+            (pour modifier le titre et le lien pour chaque page)

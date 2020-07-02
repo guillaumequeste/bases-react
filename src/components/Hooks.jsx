@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Header from './Header'
-import { watchFile } from 'fs';
+import { watchFile } from 'fs'
+import Helmet from './Helmet'
 
 function Hooks() {
   // Déclare une nouvelle variable d'état, que l'on va appeler « count »
@@ -17,6 +18,8 @@ function Hooks() {
 
   return (
     <div>
+      <Helmet title={"Hooks bases React"}
+                        link={"https://www.guillaumequeste.fr"} />
       <Header />
       <div className="container">
         <div>

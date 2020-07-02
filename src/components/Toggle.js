@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './Header'
+import Helmet from './Helmet'
 
 const styles = {
     paddingBottom: "5px"
@@ -22,6 +23,8 @@ class Toggle extends Component {
     render () {
         return(
             <div style={styles}>
+                <Helmet title={"Toggle bases React"}
+                        link={"https://www.guillaumequeste.fr"} />
                 <Header />
                 <h3>Toggle :</h3>
                 {this.state.display && <img src={require("../img/ic_favorite_border.png")} alt="ic_favorite_border" onClick={this.toggleDisplay}></img>}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './Header'
+import Helmet from './Helmet'
 
 class Contact extends Component {
     constructor(props) {
@@ -107,6 +108,8 @@ class Contact extends Component {
     render () {
         return (
             <div className="bodyLogement">
+                <Helmet title={"Contact bases React"}
+                        link={"https://www.guillaumequeste.fr"} />
                 <Header />
                 <form className="container pb-5">
                     <h3 className="text-center pt-2">Informations concernant le logement</h3>

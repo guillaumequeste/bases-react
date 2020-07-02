@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import liste from '../liste.json'
+import Helmet from './Helmet'
 
 class Detail extends Component {
     render () {
@@ -15,6 +16,8 @@ class Detail extends Component {
 
         return (
             <div>
+                <Helmet title={"Detail perssonne bases React"}
+                        link={"https://www.guillaumequeste.fr"} />
                 <Header />
                 <div className="fiche">
                     <div className="image">

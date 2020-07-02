@@ -1,8 +1,9 @@
-import React from "react";
-import Header from './Header';
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-import Lightbox from "react-image-lightbox";
-import "./Lightbox.css";
+import React from "react"
+import Header from './Header'
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
+import Lightbox from "react-image-lightbox"
+import "./Lightbox.css"
+import Helmet from './Helmet'
 
 class LB extends React.Component {
 state = {
@@ -47,6 +48,8 @@ render() {
 const { photoIndex, isOpen, images } = this.state;
   return (
     <div>
+        <Helmet title={"Lightbox React"}
+                        link={"https://www.guillaumequeste.fr"} />
         <Header />
         <MDBContainer className="mt-5">
             <div className="mdb-lightbox no-margin">
