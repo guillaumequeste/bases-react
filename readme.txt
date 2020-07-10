@@ -10,7 +10,6 @@
 10) redirect react-router et .htaccess
 11) lightbox
 12) carte (leaflet react-leaflet)
-13) référencement (react-helmet)
 
 
 1) Si 'npx create-react-app myapp' n'installe pas public, src, scripts, faire :
@@ -145,6 +144,16 @@ ou  - après le build, dans le fichier index.html, changer le head :
         <meta name="twitter:title" content="Projet React Histoire de france" />
         <meta name="twitter:image" content="http://www.guillaumequeste.fr/img/histoire.png" />
 
+        (Ajouter une librairie :
+            - yarn add react-helmet
+            Créer un composant 'Helmet.jsx' dans le dossier 'components'
+            Dans chaque composant, mettre :
+                - import Helmet from './Helmet' (import Helmet from './components/Helmet' pour 'App.js')
+                - <Helmet title={"Normal bases React"}
+                        link={"https://www.guillaumequeste.fr"} />
+            (pour modifier le titre et le lien pour chaque page)
+        )
+
 
 9) Ancienne version 'Detail.js' :
 
@@ -236,13 +245,22 @@ export default Detail
     Ajouter un component 'Carte.jsx'
     Ajouter un component 'Inos.jsx' (composant dans lequel se trouve la carte)
     Ajouter le css (section 'Infos' dans 'App.css')
+    Bien ajouter :
+        - html,
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+            }
 
+            #root {
+                width: inherit;
+                height: inherit;
+            }
 
-13) Ajouter une librairie :
-        - yarn add react-helmet
-    Créer un composant 'Helmet.jsx' dans le dossier 'components'
-    Dans chaque composant, mettre :
-        - import Helmet from './Helmet' (import Helmet from './components/Helmet' pour 'App.js')
-        - <Helmet title={"Normal bases React"}
-                        link={"https://www.guillaumequeste.fr"} />
-            (pour modifier le titre et le lien pour chaque page)
+            .leaflet-container {
+                width: 60vw;
+                height: 60vh;
+                margin-bottom: 10px;
+            }
