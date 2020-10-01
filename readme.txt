@@ -6,6 +6,7 @@
 6) envoyer un mail via EmailJS
 7) yarn build
 8) SEO (react-helmet)
+8') Ajout favicon
 9) ancienne version 'Detail.js'
 10) redirect react-router et .htaccess
 11) lightbox
@@ -153,6 +154,19 @@ ou  - après le build, dans le fichier index.html, changer le head :
                         link={"https://www.guillaumequeste.fr"} />
             (pour modifier le titre et le lien pour chaque page)
         )
+
+
+8') Créer les ficheirs favicon sur le site https://realfavicongenerator.net/.
+    Télécharger le dossier compressé.
+    Dézipper le dossier et mettre les fichiers à la racine du projet sur le serveur.
+    Dans React-Helmet, ajouter les lignes suivantes :
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
 
 
 9) Ancienne version 'Detail.js' :
