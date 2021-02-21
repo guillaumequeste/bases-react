@@ -20,8 +20,11 @@ import $ from 'jquery'
 import Popper from 'popper.js'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 
+import ScrollToTop from './components/ScrollToTop'
+
 const Root = () => (
     <Router>
+        <ScrollToTop />
         <Switch>
             <Route exact path='/' component={App}/>
             <Route path='/liste' component={Liste}/>

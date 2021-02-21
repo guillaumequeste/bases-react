@@ -11,6 +11,7 @@
 10) redirect react-router et .htaccess
 11) lightbox
 12) carte (leaflet react-leaflet)
+13) scroll to top when navigating
 
 
 1) Si 'npx create-react-app myapp' n'installe pas public, src, scripts, faire :
@@ -278,3 +279,28 @@ export default Detail
                 height: 60vh;
                 margin-bottom: 10px;
             }
+
+
+13) Créer un component 'ScrollToTop' dans le dossier 'components' :
+        import { useEffect } from 'react';
+        import { withRouter } from 'react-router-dom';
+        function ScrollToTop({ history }) {
+        useEffect(() => {
+            const unlisten = history.listen(() => {
+            window.scrollTo(0, 0);
+            });
+            return () => {
+            unlisten();
+            }
+        }, []);
+        return null;
+        }
+        export default withRouter(ScrollToTop);
+    
+    Dans le fichier 'index.js', ajouter :
+        import ScrollToTop from './components/ScrollToTop'
+        et
+        <Router>
+        <ScrollToTop />     <----------
+        <Switch>
+            <Route exact path='/' component={App}/>
