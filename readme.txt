@@ -258,7 +258,7 @@ export default Detail
         - yarn add leaflet
         - yarn add react-leaflet
     Ajouter un component 'Carte.jsx'
-    Ajouter un component 'Inos.jsx' (composant dans lequel se trouve la carte)
+    Ajouter un component 'Infos.jsx' (composant dans lequel se trouve la carte)
     Ajouter le css (section 'Infos' dans 'App.css')
     Bien ajouter :
         - html,
@@ -279,6 +279,13 @@ export default Detail
                 height: 60vh;
                 margin-bottom: 10px;
             }
+
+    -> actualisation
+    Map devient MapContainer
+    ne pas oublier dans le composant où on met la carte:
+
+    Leaflet.Icon.Default.imagePath =
+  '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/'
 
 
 13) Créer un component 'ScrollToTop' dans le dossier 'components' :
