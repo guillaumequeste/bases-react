@@ -47,7 +47,7 @@ class Contact extends Component {
     validateMail() {
         let errors = {}
         let formIsValid = true
-        if (this.state.ville == '') {
+        if (this.state.ville === '') {
             errors.ville = "Choisir une ville"
             formIsValid = false
         }

@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
-import Carte from "./Carte";
-import Leaflet from "leaflet";
-import "leaflet/dist/leaflet.css";
 import Helmet from "./Helmet";
 
 function API() {

@@ -13,6 +13,7 @@ import LB from './components/LB'
 import Hooks from './components/Hooks'
 import Infos from './components/Infos'
 import API from './components/API'
+import Animations from './components/Animations'
 
 import NotFound from './components/NotFound'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -36,6 +37,7 @@ const Root = () => (
             <Route path='/hooks' component={Hooks}/>
             <Route path='/infos' component={Infos}/>
             <Route path='/api' component={API}/>
+            <Route path='/animations' component={Animations}/>
             <Route path='/notfound' component={NotFound}/>
             <Redirect to="/notfound" />
         </Switch>

@@ -12,6 +12,7 @@
 11) lightbox
 12) carte (leaflet react-leaflet)
 13) scroll to top when navigating
+14) apparition / disparition texte
 
 
 1) Si 'npx create-react-app myapp' n'installe pas public, src, scripts, faire :
@@ -311,3 +312,6 @@ export default Detail
         <ScrollToTop />     <----------
         <Switch>
             <Route exact path='/' component={App}/>
+
+
+14) voir 'Animations'
