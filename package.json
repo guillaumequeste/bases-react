@@ -10,7 +10,7 @@
     "jquery": "^3.4.1",
     "kind-of": "^6.0.3",
     "leaflet": "^1.6.0",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.21",
     "lodash.template": "^4.5.0",
     "mdbreact": "^4.25.3",
     "minimist": "^1.2.5",
